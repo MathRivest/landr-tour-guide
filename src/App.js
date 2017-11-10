@@ -6,6 +6,19 @@ import Cities from './cities/cities';
 import MapView from './map-view/map-view';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedCities: []
+        };
+    }
+
+    handleCitySelection = cities => {
+        this.setState({
+            selectedCities: cities
+        });
+    };
+
     render() {
         return (
             <div className="App">
@@ -14,9 +27,9 @@ class App extends Component {
                 </header>
 
                 <div className="App-body">
-                    <Cities />
+                    <Cities onReady={this.handleCitySelection} />
 
-                    <MapView />
+                    <MapView cities={this.state.selectedCities} />
                 </div>
             </div>
         );

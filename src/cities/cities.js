@@ -8,15 +8,15 @@ class Cities extends Component {
         super(props);
         this.state = {
             cities: [
-                { id: 1, name: 'City 1' },
-                { id: 2, name: 'City 2' },
-                { id: 3, name: 'City 3' },
-                { id: 4, name: 'City 4' },
-                { id: 5, name: 'City 5' },
-                { id: 6, name: 'City 6' },
-                { id: 7, name: 'City 7' },
-                { id: 8, name: 'City 8' },
-                { id: 9, name: 'City 9' }
+                { name: 'City 1', coordinates: [-0.119970527, 51.52916347] },
+                { name: 'City 2', coordinates: [-0.129970527, 51.52916347] },
+                { name: 'City 3', coordinates: [-0.139970527, 51.52916347] },
+                { name: 'City 4', coordinates: [-0.149970527, 51.52916347] },
+                { name: 'City 5', coordinates: [-0.159970527, 51.52916347] },
+                { name: 'City 6', coordinates: [-0.169970527, 51.52916347] },
+                { name: 'City 7', coordinates: [-0.179970527, 51.52916347] },
+                { name: 'City 8', coordinates: [-0.189970527, 51.52916347] },
+                { name: 'City 9', coordinates: [-0.199970527, 51.52916347] }
             ]
         };
     }
@@ -24,7 +24,7 @@ class Cities extends Component {
     handleSelectCity = city => {
         this.setState((prevState, props) => {
             const updatedCities = _.map(this.state.cities, c => {
-                if (c.id === city.id) {
+                if (c.name === city.name) {
                     c['selected'] = !!!c['selected'];
                 }
                 return c;
@@ -34,6 +34,11 @@ class Cities extends Component {
                 cities: updatedCities
             };
         });
+    };
+
+    handleNextClick = () => {
+        const selectedCities = _.filter(this.state.cities, { selected: true });
+        this.props.onReady(selectedCities);
     };
 
     renderCities() {
@@ -51,7 +56,7 @@ class Cities extends Component {
     renderNextButton() {
         const hasSelectedcity = _.some(this.state.cities, { selected: true });
         if (hasSelectedcity) {
-            return <button>View your Tour</button>;
+            return <button onClick={this.handleNextClick}>View your Tour</button>;
         }
     }
 
