@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Cities from './cities/cities';
-import Map from './map/map';
+import MapView from './map-view/map-view';
 
 class App extends Component {
     render() {
@@ -16,7 +16,7 @@ class App extends Component {
                 <div className="App-body">
                     <Cities />
 
-                    <Map />
+                    <MapView />
                 </div>
             </div>
         );

@@ -1,25 +1,27 @@
 {
-    "name": "landr-tour-guide",
-    "homepage": "https://mathrivest.github.io/landr-tour-guide",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "gh-pages": "^1.0.0",
-        "node-sass-chokidar": "0.0.3",
-        "react": "^16.1.0",
-        "react-dom": "^16.1.0"
-    },
-    "devDependencies": {
-        "react-scripts": "1.0.17"
-    },
-    "scripts": {
-        "build-css": "node-sass-chokidar src/ -o src/",
-        "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
-    }
+  "name": "landr-tour-guide",
+  "homepage": "https://mathrivest.github.io/landr-tour-guide",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gh-pages": "^1.0.0",
+    "mapbox-gl": "^0.41.0",
+    "node-sass-chokidar": "0.0.3",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-mapbox-gl": "^2.7.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
 }
