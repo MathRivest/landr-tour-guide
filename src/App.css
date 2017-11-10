@@ -5,15 +5,14 @@
 .App-header {
   box-sizing: border-box;
   background-color: #222;
-  height: 60px;
-  padding: 18px 12px;
+  padding: 12px;
   color: white; }
+
+.App-body {
+  padding: 24px; }
 
 .App-title {
   font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
 
 @keyframes App-logo-spin {
   from {
