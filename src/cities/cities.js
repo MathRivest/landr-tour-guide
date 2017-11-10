@@ -51,7 +51,7 @@ class Cities extends Component {
     renderNextButton() {
         const hasSelectedcity = _.some(this.state.cities, { selected: true });
         if (hasSelectedcity) {
-            return <div>Next</div>;
+            return <button>View your Tour</button>;
         }
     }
 
