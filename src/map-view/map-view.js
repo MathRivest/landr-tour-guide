@@ -40,8 +40,16 @@ class MapView extends Component {
 
     getFeatures() {
         return this.cities.map(city => {
-            return (<Feature coordinates={city.coordinates}/>);
+            return (<Feature
+                properties={city}
+                coordinates={city.coordinates}
+                onClick={this.onCityClick}
+            />);
         });
+    }
+
+    onCityClick(event) {
+        alert(event.feature.properties.name);
     }
 }
 
