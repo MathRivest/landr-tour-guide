@@ -28,7 +28,7 @@ class MapView extends Component {
         return (
             <div>
                 <Map
-                    style="mapbox://styles/mapbox/light-v9"
+                    style="mapbox://styles/mrivest/cj9uo7m9a42my2smpbvv5euns"
                     fitBounds={fitBounds}
                     center={center}
                     zoom={zoom}

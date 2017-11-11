@@ -28,11 +28,11 @@ class App extends Component {
                 </header>
 
                 <nav className="App-nav">
-                    <a href="#">All</a>
-                    <a href="#">Mid West</a>
-                    <a href="#">West Coast</a>
-                    <a href="#">East Coast</a>
-                    <a href="#">South East</a>
+                    <a href="">All</a>
+                    <a href="">Mid West</a>
+                    <a href="">West Coast</a>
+                    <a href="">East Coast</a>
+                    <a href="">South East</a>
                 </nav>
 
                 <div className="App-body">
