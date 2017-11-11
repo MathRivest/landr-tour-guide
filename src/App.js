@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Cities from './cities/cities';
 import MapView from './map-view/map-view';
+import { BrowserRouter as Router, Route, PropsRoute } from 'react-router-dom';
 
 class App extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             selectedCities: []
         };
@@ -27,9 +28,12 @@ class App extends Component {
                 </header>
 
                 <div className="App-body">
-                    <Cities onReady={this.handleCitySelection} />
-
-                    <MapView cities={this.state.selectedCities} />
+                    <Router>
+                        <div>
+                            <Route exact path="/" component={Cities} onReady={this.handleCitySelection}/>
+                            <Route path="/tour" render={(props) => ( <MapView cities={this.state.selectedCities}/> )}/>
+                        </div>
+                    </Router>
                 </div>
             </div>
         );
