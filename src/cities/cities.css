@@ -10,18 +10,22 @@
   text-align: center;
   cursor: pointer; }
   .City-content {
-    background: white;
-    transition: background 200ms linear;
+    z-index: 2;
     position: absolute;
     top: 6px;
     left: 6px;
     right: 6px;
     bottom: 6px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
+    display: flex; }
+    .City-content-body {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
   .City:before {
     content: '';
     float: left;
@@ -30,6 +34,19 @@
     margin-bottom: -3px; }
   .City-infos {
     margin-bottom: 20px; }
+  .City-background {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    transition: background 200ms linear;
+    overflow: hidden; }
+    .City-background img {
+      opacity: 0.2;
+      width: 100%; }
   .City-checkbox {
     flex: 0 0 auto;
     display: flex;
@@ -51,8 +68,9 @@
       border-left-color: transparent !important;
       border-top-color: transparent !important;
       margin-bottom: 9px; }
+  .City.is-selected .City-background {
+    background: #0d4457; }
   .City.is-selected .City-content {
-    background: #0d4457;
     color: white; }
   .City.is-selected .City-checkbox {
     background-color: #f0946e;

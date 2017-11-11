@@ -14,8 +14,7 @@
     cursor: pointer;
 
     &-content {
-        background: white;
-        transition: background 200ms linear;
+        z-index: 2;
         position: absolute;
         top: 6px;
         left: 6px;
@@ -23,9 +22,15 @@
         bottom: 6px;
         padding: 20px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        &-body {
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &:before {
@@ -40,6 +45,22 @@
 
     &-infos {
         margin-bottom: 20px;
+    }
+
+    &-background {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        transition: background 200ms linear;
+        overflow: hidden;
+        img {
+            opacity: 0.2;
+            width: 100%;
+        }
     }
 
     &-checkbox {
@@ -67,8 +88,10 @@
     }
 
     &.is-selected {
+        .City-background {
+            background: rgba($color-brand-secondary, 1);
+        }
         .City-content {
-            background: $color-brand-secondary;
             color: white;
         }
 
