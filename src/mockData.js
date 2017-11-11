@@ -1,4 +1,22 @@
-export const mockCities = [
+let mockCities;
+let mockVenues;
+
+mockVenues = {
+    'los-angeles': [
+        { id: 'doug-fire-lounge', name: 'Doug Fire Lounge', description: null },
+        {
+            id: 'doug-fire-lounge-2',
+            name: 'Doug Fire Lounge 2',
+            description:
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo facilis architecto animi, accusamus optio vero eaque neque nam fuga natus!'
+        },
+        { id: 'doug-fire-lounge', name: 'Doug Fire Lounge', description: null },
+        { id: 'doug-fire-lounge', name: 'Doug Fire Lounge', description: null },
+        { id: 'doug-fire-lounge', name: 'Doug Fire Lounge', description: null }
+    ]
+};
+
+mockCities = [
     { id: 'seattle', name: 'Seattle', stateLong: 'California', state: 'CA', coordinates: [-122.3321, 47.6062] },
     { id: 'portland', name: 'Portland', stateLong: 'Oregon', state: 'OR', coordinates: [-122.679565, 45.512794] },
     {
@@ -15,7 +33,8 @@ export const mockCities = [
             'The city of Los Angeles, come for the music industry but stay for the beaches. Be careful touring here because the cheap eats, beaches, medicinal marijuana just might keep you. An oasis in a literal dessert. ',
         stateLong: 'California',
         state: 'CA',
-        coordinates: [-118.2437, 34.0522]
+        coordinates: [-118.2437, 34.0522],
+        venues: mockVenues['los-angeles']
     },
     {
         id: 'san-diego',
@@ -31,15 +50,4 @@ export const mockCities = [
     { id: 'santa-cruz', name: 'Santa Cruz', stateLong: 'California', state: 'CA', coordinates: [-122.0308, 36.9741] }
 ];
 
-export const mockVenues = [
-    { id: 'doug-fire-lounge', name: 'Doug Fire Lounge', description: null },
-    {
-        id: 'doug-fire-lounge-2',
-        name: 'Doug Fire Lounge 2',
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo facilis architecto animi, accusamus optio vero eaque neque nam fuga natus!'
-    },
-    { id: 'doug-fire-lounge', name: 'Doug Fire Lounge', description: null },
-    { id: 'doug-fire-lounge', name: 'Doug Fire Lounge', description: null },
-    { id: 'doug-fire-lounge', name: 'Doug Fire Lounge', description: null }
-];
+export { mockCities, mockVenues };

@@ -23,7 +23,10 @@
         margin: 0 0 36px;
     }
     &-cta {
-        margin-top: auto;
         text-align: center;
+    }
+
+    &:last-child {
+        margin-top: auto;
     }
 }

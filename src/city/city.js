@@ -10,13 +10,12 @@ class City extends Component {
         super(props);
         const cityId = this.props.match.params.cityId;
         this.state = {
-            city: _.find(mockCities, { id: cityId }),
-            venues: mockVenues
+            city: _.find(mockCities, { id: cityId })
         };
     }
 
     renderVenues() {
-        return this.state.venues.map((venue, i) => {
+        return this.state.city.venues.map((venue, i) => {
             const description = venue.description ? <p>{venue.description}</p> : '';
             return (
                 <div key={i} className="Venue">
