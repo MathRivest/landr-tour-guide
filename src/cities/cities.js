@@ -37,7 +37,7 @@ class Cities extends Component {
     renderCities() {
         return this.state.cities.map((city, i) => {
             const tileStyles = {
-                backgroundImage: `url(${process.env.PUBLIC_URL}/${city.id}.jpg)`
+                backgroundImage: `url(${process.env.PUBLIC_URL}/images/${city.id}.jpg)`
             };
             return (
                 <div key={i} className={'City' + (city.selected ? ' is-selected' : '')} style={tileStyles}>
