@@ -36,15 +36,20 @@ class Cities extends Component {
 
     renderCities() {
         return this.state.cities.map((city, i) => {
-            const tileStyles = {
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/${city.id}.jpg)`
+            const tileContentStyles = {
+                backgroundImage: `url(${process.env.PUBLIC_URL}/images/${city.id}.jpeg)`
             };
             return (
-                <div key={i} className={'City' + (city.selected ? ' is-selected' : '')} style={tileStyles}>
-                    <div className="City-content" onClick={() => this.handleSelectCity(city)}>
-                        <h4 className="City-title">{city.name}</h4>
-                        <div className="City-infos">{city.state}</div>
-                        <div className="City-checkbox" />
+                <div key={i} className={'City' + (city.selected ? ' is-selected' : '')}>
+                    <div className="City-content" onClick={() => this.handleSelectCity(city)} style={tileContentStyles}>
+                        <div class="City-background">
+                            <img src={`${process.env.PUBLIC_URL}/images/${city.id}.jpeg`} />
+                        </div>
+                        <div className="City-content-body">
+                            <h4 className="City-title">{city.name}</h4>
+                            <div className="City-infos">{city.state}</div>
+                            <div className="City-checkbox" />
+                        </div>
                     </div>
                 </div>
             );
