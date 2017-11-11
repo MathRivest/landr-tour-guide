@@ -19,8 +19,8 @@ class MapView extends Component {
         this.state = {
             selectedCity: undefined,
             fitBounds: undefined,
-            center: [-0.109970527, 51.52916347],
-            zoom: [5]
+            center: [-104.990251, 39.7392358],
+            zoom: [4]
         };
     }
 
