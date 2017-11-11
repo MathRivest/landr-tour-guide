@@ -1,17 +1,17 @@
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40px;
+@import '_variables';
+
+.App {
+    padding: 0 80px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .App-header {
-    box-sizing: border-box;
-    background-color: #222;
-    padding: 12px;
-    color: white;
+    padding-top: 160px;
+    margin-bottom: 48px;
 }
 
 .App-body {
-    padding: 24px;
 }
 
 .App-title {

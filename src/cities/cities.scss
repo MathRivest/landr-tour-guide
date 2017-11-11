@@ -1,3 +1,5 @@
+@import '../_variables';
+
 .Cities {
     display: flex;
     flex-wrap: wrap;
@@ -6,19 +8,23 @@
 .City {
     position: relative;
     box-sizing: border-box;
-    width: percentage(1/6);
-    color: white;
+    width: percentage(1/5);
+    color: $color-brand-secondary;
+    text-align: center;
     cursor: pointer;
 
     &-content {
-        background: lightblue;
+        background: white;
         transition: background 200ms linear;
         position: absolute;
         top: 6px;
         left: 6px;
         right: 6px;
         bottom: 6px;
-        padding: 9px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &:before {
@@ -30,6 +36,26 @@
     &.is-selected {
         .City-content {
             background: lightpink;
+        }
+    }
+
+    &-checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50px;
+        border: 1px solid $color-grey;
+        background-color: white;
+        &:after {
+            content: '';
+            display: bloxk;
+            border: 2px solid $color-grey;
+            width: 14px;
+            height: 18px;
+            border-left-color: transparent;
+            border-top-color: transparent;
         }
     }
 }

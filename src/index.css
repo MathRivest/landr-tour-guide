@@ -1,36 +1,33 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-}
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  background-color: #f0946e;
+  color: white; }
 
 strong {
-    font-weight: 400;
-}
+  font-weight: 400; }
 
 h1 {
-    font-family: 'Eczar', serif;
-    font-size: 54px;
-    line-height: 64px;
-    letter-spacing: 2px;
-    margin: 0 0 12px 0;
-}
+  font-family: 'Eczar', serif;
+  font-size: 54px;
+  line-height: 64px;
+  letter-spacing: 2px;
+  margin: 0 0 12px 0; }
 
 h2,
 h3 {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 36px;
-    line-height: 48px;
-    margin: 0 0 12px 0;
-}
+  font-family: 'Work Sans', sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  margin: 0 0 12px 0; }
 
 h4 {
-    font-family: 'Eczar', serif;
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 2px;
-    margin: 0 0 12px 0;
-}
+  font-family: 'Eczar', serif;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  margin: 0 0 12px 0; }

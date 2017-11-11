@@ -5,21 +5,42 @@
 .City {
   position: relative;
   box-sizing: border-box;
-  width: 16.66667%;
-  color: white;
+  width: 20%;
+  color: #0d4457;
+  text-align: center;
   cursor: pointer; }
   .City-content {
-    background: lightblue;
+    background: white;
     transition: background 200ms linear;
     position: absolute;
     top: 6px;
     left: 6px;
     right: 6px;
     bottom: 6px;
-    padding: 9px; }
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .City:before {
     content: '';
     float: left;
     padding-top: 100%; }
   .City.is-selected .City-content {
     background: lightpink; }
+  .City-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 1px solid #acacac;
+    background-color: white; }
+    .City-checkbox:after {
+      content: '';
+      display: bloxk;
+      border: 2px solid #acacac;
+      width: 14px;
+      height: 18px;
+      border-left-color: transparent;
+      border-top-color: transparent; }
