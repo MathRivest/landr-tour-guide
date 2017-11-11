@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactMapboxGl, { Layer, Feature, Popup, ZoomControl } from 'react-mapbox-gl';
+import ReactMapboxGl, { Layer, Marker, ZoomControl } from 'react-mapbox-gl';
 import { withRouter } from 'react-router-dom';
 
 import './map-view.css';
@@ -35,14 +35,24 @@ class MapView extends Component {
         return this.props.cities.map((city, i) => {
             return (
                 <div className="MapView-cities-item">
-                    <h3 className="MapView-cities-item-title TextHeading--secondary">{city.name}</h3>
+                    <h3 className="MapView-cities-item-title TextHeading--secondary"
+                        onMouseEnter={this.onMouseEnter.bind(this, city)}
+                        onMouseLeave={this.onMouseLeave.bind(this, city)}>{city.name}</h3>
                     <div className="MapView-cities-item-venueCta">
-                        <a>Choose your venue</a>
+                        <a href={city.id}>Choose your venue</a>
                     </div>
                     <a className="MapView-cities-item-dateCta">DD/MM/YYYY</a>
                 </div>
             );
         });
+    }
+
+    onMouseEnter(city, { map }) {
+        consolelog('mouse entered ', city.id);
+    }
+
+    onMouseLeave(city, { map }) {
+        consolelog('mouse left ', city.id);
     }
 
     render() {
@@ -65,12 +75,6 @@ class MapView extends Component {
                         {this.getFeatures(this.props.cities)}
                     </Layer>
 
-                    {selectedCity && (
-                        <Popup offset={[0, -50]} coordinates={selectedCity.coordinates}>
-                            {selectedCity.name}
-                        </Popup>
-                    )}
-
                     <ZoomControl />
                 </Map>
             </div>
@@ -86,14 +90,15 @@ class MapView extends Component {
     getFeatures(cities) {
         return cities.map((city, i) => {
             return (
-                <Feature
+                <Marker
                     key={i}
                     properties={city}
                     coordinates={city.coordinates}
-                    onClick={this.onClick.bind(this, city)}
-                    onMouseEnter={this.onToggleHover.bind(this, 'pointer')}
-                    onMouseLeave={this.onToggleHover.bind(this, '')}
-                />
+                    onMouseEnter={this.onMouseEnter.bind(this, city)}
+                    onMouseLeave={this.onMouseLeave.bind(this, city)}
+                >
+                    <img src=''/>
+                </Marker>
             );
         });
     }
