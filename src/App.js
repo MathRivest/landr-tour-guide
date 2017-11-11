@@ -3,7 +3,7 @@ import './App.css';
 
 import Cities from './cities/cities';
 import MapView from './map-view/map-view';
-import { BrowserRouter as Router, Route, PropsRoute } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
     constructor(props) {
