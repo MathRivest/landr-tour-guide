@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature, Popup, ZoomControl } from 'react-mapbox-gl';
+import { withRouter } from 'react-router-dom';
 
 const Map = ReactMapboxGl({
     accessToken: 'pk.eyJ1IjoibWNoYW1iYXVkIiwiYSI6ImNqOXU5M21jeDB0aGkzMnBjZXQybjJnbmUifQ.hk9NZK4ie7Uo42KoUUYuaw'
@@ -8,6 +9,10 @@ const Map = ReactMapboxGl({
 class MapView extends Component {
     constructor(props) {
         super(props);
+
+        if (!this.props.cities || this.props.cities.length === 0) {
+            this.props.history.push('/');
+        }
 
         this.state = {
             selectedCity: undefined,
@@ -83,4 +88,4 @@ class MapView extends Component {
     }
 }
 
-export default MapView;
+export default withRouter(MapView);
