@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { mockCities } from './../mockData';
 import './cities.css';
+import { withRouter } from 'react-router-dom';
 
 class Cities extends Component {
     constructor(props) {
@@ -29,6 +30,8 @@ class Cities extends Component {
     handleNextClick = () => {
         const selectedCities = _.filter(this.state.cities, { selected: true });
         this.props.onReady(selectedCities);
+
+        this.props.history.push(`/tour`);
     };
 
     renderCities() {
@@ -38,7 +41,7 @@ class Cities extends Component {
                     <div className="City-content" onClick={() => this.handleSelectCity(city)}>
                         <h4 className="City-title">{city.name}</h4>
                         <div className="City-infos">{city.state}</div>
-                        <div className="City-checkbox" />
+                        <div className="City-checkbox"/>
                     </div>
                 </div>
             );
@@ -48,7 +51,7 @@ class Cities extends Component {
     renderNextButton() {
         const hasSelectedcity = _.some(this.state.cities, { selected: true });
         if (hasSelectedcity) {
-            return <button onClick={this.handleNextClick}>View your Tour</button>;
+            return <button onClick={this.handleNextClick.bind(this)}>View your Tour</button>;
         }
     }
 
@@ -62,4 +65,4 @@ class Cities extends Component {
     }
 }
 
-export default Cities;
+export default withRouter(Cities);

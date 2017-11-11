@@ -8,7 +8,7 @@ const Map = ReactMapboxGl({
 class MapView extends Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             selectedCity: undefined,
             fitBounds: undefined,
