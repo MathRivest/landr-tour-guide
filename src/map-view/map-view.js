@@ -47,11 +47,11 @@ class MapView extends Component {
         });
     }
 
-    onMouseEnter(city) {
+    onMouseEnter(city, { map }) {
         debugger
     }
 
-    onMouseLeave(city) {
+    onMouseLeave(city, { map }) {
         debugger;
     }
 
