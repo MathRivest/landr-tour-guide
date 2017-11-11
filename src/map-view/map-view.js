@@ -48,11 +48,11 @@ class MapView extends Component {
     }
 
     onMouseEnter(city, { map }) {
-        consolelog('mouse entered ', city.id);
+        console.log('mouse entered ', city.id);
     }
 
     onMouseLeave(city, { map }) {
-        consolelog('mouse left ', city.id);
+        console.log('mouse left ', city.id);
     }
 
     render() {
