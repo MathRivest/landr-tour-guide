@@ -3,7 +3,7 @@ import './App.css';
 
 import Cities from './cities/cities';
 import MapView from './map-view/map-view';
-import { BrowserRouter as Router, Route, PropsRoute } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
     constructor(props) {
@@ -26,14 +26,6 @@ class App extends Component {
                 <header className="App-header">
                     <h1>Pick your tour</h1>
                 </header>
-
-                <nav className="App-nav">
-                    <a href="">All</a>
-                    <a href="">Mid West</a>
-                    <a href="">West Coast</a>
-                    <a href="">East Coast</a>
-                    <a href="">South East</a>
-                </nav>
 
                 <div className="App-body">
                     <Router>

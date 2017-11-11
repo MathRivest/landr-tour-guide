@@ -8,7 +8,7 @@ class Cities extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cities: mockCities
+            cities: _.orderBy(mockCities, [city => city.id], ['asc'])
         };
     }
 
@@ -66,6 +66,13 @@ class Cities extends Component {
     render() {
         return (
             <div>
+                <nav className="App-nav">
+                    <a href="">All</a>
+                    <a href="">Mid West</a>
+                    <a href="">West Coast</a>
+                    <a href="">East Coast</a>
+                    <a href="">South East</a>
+                </nav>
                 <div className="Cities">{this.renderCities()}</div>
                 {this.renderNextButton()}
             </div>
