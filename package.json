@@ -1,6 +1,5 @@
 {
   "name": "landr-tour-guide",
-  "homepage": "https://mathrivest.github.io/landr-tour-guide",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
