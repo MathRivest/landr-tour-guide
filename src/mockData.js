@@ -7,4 +7,6 @@ export const mockCities = [
     { id: 'olympia', name: 'Olympia', state: 'WA', coordinates: [-122.9007, 47.0379] },
     { id: 'oakland', name: 'Oakland', state: 'CA', coordinates: [-122.2711, 37.8044] },
     { id: 'san-jose', name: 'San Jose', state: 'CA', coordinates: [-121.8863, 37.3382] },
+    { id: 'eugene', name: 'Eugene', state: 'OR', coordinates: [-123.0868, 44.0521] },
+    { id: 'santa-cruz', name: 'Santa Cruz', state: 'CA', coordinates: [-122.0308, 36.9741] }
 ];
