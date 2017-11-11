@@ -36,11 +36,9 @@ class Cities extends Component {
             return (
                 <div key={i} className={'City' + (city.selected ? ' is-selected' : '')}>
                     <div className="City-content" onClick={() => this.handleSelectCity(city)}>
-                        <div>
-                            <h4>{city.name}</h4>
-                            <div>{city.state}</div>
-                            <div className="City-checkbox" />
-                        </div>
+                        <h4 className="City-title">{city.name}</h4>
+                        <div className="City-infos">{city.state}</div>
+                        <div className="City-checkbox" />
                     </div>
                 </div>
             );
