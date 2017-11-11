@@ -12,15 +12,20 @@ class MapView extends Component {
     constructor(props) {
         super(props);
 
+        let center = [-104.990251, 39.7392358];
+        let zoom = [4];
         if (!this.props.cities || this.props.cities.length === 0) {
             // this.props.history.push('/');
+        } else {
+            center = this.props.cities[0].coordinates;
+            zoom = [7]
         }
 
         this.state = {
             selectedCity: undefined,
             fitBounds: undefined,
-            center: [-104.990251, 39.7392358],
-            zoom: [4]
+            center,
+            zoom
         };
     }
 
