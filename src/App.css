@@ -3,8 +3,11 @@
   max-width: 1440px;
   margin: 0 auto; }
 
+.App-logo {
+  margin-top: 24px; }
+
 .App-header {
-  padding-top: 120px;
+  padding-top: 60px;
   margin-bottom: 48px; }
 
 .App-nav {

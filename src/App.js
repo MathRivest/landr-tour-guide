@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from './logo.svg';
 
 import Cities from './cities/cities';
 import MapView from './map-view/map-view';
@@ -23,6 +24,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <img className="App-logo" src={logo} />
                 <Router>
                     <div className="App-body">
                         <Route exact path="/" render={props => <Cities onReady={this.handleCitySelection} />} />

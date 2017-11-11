@@ -13,8 +13,6 @@
         flex: 0 0 auto;
         &-item {
             margin-bottom: 42px;
-            &-title {
-            }
             &-venueCta {
                 font-size: 18px;
             }
@@ -22,7 +20,7 @@
                 font-size: 14px;
             }
             &:last-child {
-                margin-bottom: 0;
+                margin-bottom: 48px;
             }
         }
     }
