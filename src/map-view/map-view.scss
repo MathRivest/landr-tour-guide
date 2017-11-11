@@ -1,0 +1,39 @@
+@import '../_variables';
+
+.MapView {
+    position: relative;
+    display: flex;
+    margin-right: -80px;
+
+    &-cities {
+        padding: 48px 0 0 0;
+        box-sizing: border-box;
+        width: percentage(2/5);
+        padding-right: 20px;
+        flex: 0 0 auto;
+        &-item {
+            margin-bottom: 42px;
+            &-title {
+            }
+            &-venueCta {
+                font-size: 18px;
+            }
+            &-dateCta {
+                font-size: 14px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .mapboxgl-map {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        color: $color-brand-secondary;
+        width: percentage(3/5);
+        flex: 1 0 auto;
+    }
+}

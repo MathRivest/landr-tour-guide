@@ -46,6 +46,7 @@ h4 {
 
 a {
   color: white;
-  transition: color 200ms linear; }
+  transition: color 200ms linear;
+  cursor: pointer; }
   a:hover {
     color: #0d4457; }

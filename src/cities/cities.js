@@ -42,7 +42,7 @@ class Cities extends Component {
             return (
                 <div key={i} className={'City' + (city.selected ? ' is-selected' : '')}>
                     <div className="City-content" onClick={() => this.handleSelectCity(city)} style={tileContentStyles}>
-                        <div class="City-background">
+                        <div className="City-background">
                             <img src={`${process.env.PUBLIC_URL}/images/${city.id}.jpeg`} />
                         </div>
                         <div className="City-content-body">
@@ -59,7 +59,11 @@ class Cities extends Component {
     renderNextButton() {
         const hasSelectedcity = _.some(this.state.cities, { selected: true });
         if (hasSelectedcity) {
-            return <button onClick={this.handleNextClick.bind(this)}>View your Tour</button>;
+            return (
+                <div className="CitiesNextBanner">
+                    <a onClick={this.handleNextClick.bind(this)}>View your route</a>
+                </div>
+            );
         }
     }
 

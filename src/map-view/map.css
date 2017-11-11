@@ -1,5 +1,0 @@
-.MapView {
-  position: relative;
-  padding: 48px 0; }
-  .MapView .mapboxgl-map {
-    width: 100%; }

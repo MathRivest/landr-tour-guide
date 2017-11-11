@@ -1,0 +1,26 @@
+.MapView {
+  position: relative;
+  display: flex;
+  margin-right: -80px; }
+  .MapView-cities {
+    padding: 48px 0 0 0;
+    box-sizing: border-box;
+    width: 40%;
+    padding-right: 20px;
+    flex: 0 0 auto; }
+    .MapView-cities-item {
+      margin-bottom: 42px; }
+      .MapView-cities-item-venueCta {
+        font-size: 18px; }
+      .MapView-cities-item-dateCta {
+        font-size: 14px; }
+      .MapView-cities-item:last-child {
+        margin-bottom: 0; }
+  .MapView .mapboxgl-map {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #0d4457;
+    width: 60%;
+    flex: 1 0 auto; }
