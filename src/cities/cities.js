@@ -8,7 +8,7 @@ class Cities extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cities: mockCities
+            cities: _.orderBy(mockCities, [city => city.id], ['asc'])
         };
     }
 
