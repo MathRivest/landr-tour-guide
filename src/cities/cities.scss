@@ -23,6 +23,7 @@
         bottom: 6px;
         padding: 20px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -33,10 +34,12 @@
         padding-top: 100%;
     }
 
-    &.is-selected {
-        .City-content {
-            background: lightpink;
-        }
+    &-title {
+        margin-bottom: -3px;
+    }
+
+    &-infos {
+        margin-bottom: 20px;
     }
 
     &-checkbox {
@@ -48,14 +51,32 @@
         border-radius: 50px;
         border: 1px solid $color-grey;
         background-color: white;
+        transition: all 200ms linear;
         &:after {
             content: '';
-            display: bloxk;
+            display: block;
             border: 2px solid $color-grey;
-            width: 14px;
-            height: 18px;
-            border-left-color: transparent;
-            border-top-color: transparent;
+            width: 12px;
+            height: 20px;
+            transform: rotate(46deg) skewX(10deg);
+            border-left-color: transparent !important;
+            border-top-color: transparent !important;
+            margin-bottom: 9px;
+        }
+    }
+
+    &.is-selected {
+        .City-content {
+            background: $color-brand-secondary;
+            color: white;
+        }
+
+        .City-checkbox {
+            background-color: $color-brand;
+            border-color: $color-brand;
+            &:after {
+                border-color: white;
+            }
         }
     }
 }
