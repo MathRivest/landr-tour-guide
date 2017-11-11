@@ -67,7 +67,8 @@ class Cities extends Component {
         return (
             <div>
                 <div className="App-header">
-                    <h1>Pick your tour</h1>
+                    <h1 className="TextHeading--secondary">Life is a highway</h1>
+                    <h3>Book your tour</h3>
                 </div>
                 <nav className="App-nav">
                     <a href="">All</a>

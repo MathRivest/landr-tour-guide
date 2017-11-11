@@ -18,7 +18,7 @@ class MapView extends Component {
             // this.props.history.push('/');
         } else {
             center = this.props.cities[0].coordinates;
-            zoom = [7]
+            zoom = [7];
         }
 
         this.state = {
@@ -29,13 +29,19 @@ class MapView extends Component {
         };
     }
 
+    renderCities() {
+        return this.props.cities.map((city, i) => {
+            return <div>{city.name}</div>;
+        });
+    }
+
     render() {
         const { fitBounds, center, zoom, selectedCity } = this.state;
 
         return (
-            <div className="Map">
+            <div className="MapView">
                 <Map
-                    style="mapbox://styles/mrivest/cj9uo7m9a42my2smpbvv5euns"
+                    style="mapbox://styles/mrivest/cj9usby5a46jv2ro3gx7gcz37"
                     fitBounds={fitBounds}
                     center={center}
                     zoom={zoom}
