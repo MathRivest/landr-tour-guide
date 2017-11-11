@@ -23,18 +23,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <h1>Pick your tour</h1>
-                </header>
-
-                <div className="App-body">
-                    <Router>
-                        <div>
-                            <Route exact path="/" render={props => <Cities onReady={this.handleCitySelection} />} />
-                            <Route path="/tour" render={props => <MapView cities={this.state.selectedCities} />} />
-                        </div>
-                    </Router>
-                </div>
+                <Router>
+                    <div className="App-body">
+                        <Route exact path="/" render={props => <Cities onReady={this.handleCitySelection} />} />
+                        <Route path="/tour" render={props => <MapView cities={this.state.selectedCities} />} />
+                    </div>
+                </Router>
             </div>
         );
     }

@@ -66,6 +66,9 @@ class Cities extends Component {
     render() {
         return (
             <div>
+                <div className="App-header">
+                    <h1>Pick your tour</h1>
+                </div>
                 <nav className="App-nav">
                     <a href="">All</a>
                     <a href="">Mid West</a>

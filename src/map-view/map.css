@@ -1,5 +1,5 @@
 .Map {
   position: relative;
-  margin-bottom: 48px; }
+  padding: 48px 0; }
   .Map .mapboxgl-map {
     width: 100%; }
