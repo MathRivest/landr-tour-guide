@@ -15,7 +15,7 @@ class MapView extends Component {
         let center = [-104.990251, 39.7392358];
         let zoom = [6];
         if (!this.props.cities || this.props.cities.length === 0) {
-            this.props.history.push('/');
+            // this.props.history.push('/');
         } else {
             center = this.props.cities[0].coordinates;
             zoom = [7];

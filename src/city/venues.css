@@ -1,0 +1,22 @@
+.Venues {
+  display: flex;
+  flex-wrap: wrap; }
+
+.Venue {
+  flex: 0 1 auto;
+  width: 50%;
+  margin-bottom: 20px; }
+  .Venue-content {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 20px;
+    background: white;
+    color: #0d4457;
+    height: 315px;
+    display: flex;
+    flex-direction: column; }
+  .Venue p {
+    margin: 0 0 36px; }
+  .Venue-cta {
+    margin-top: auto;
+    text-align: center; }

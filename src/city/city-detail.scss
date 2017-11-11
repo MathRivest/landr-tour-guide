@@ -1,0 +1,17 @@
+.CityDetail {
+    display: flex;
+    padding-top: 60px;
+    &-content {
+        width: 40%;
+        text-align: center;
+        &-subtitle {
+            text-transform: uppercase;
+        }
+        &-description {
+            padding: 0 60px;
+        }
+    }
+    &-venues {
+        width: 60%;
+    }
+}

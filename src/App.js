@@ -4,6 +4,7 @@ import logo from './logo.svg';
 
 import Cities from './cities/cities';
 import MapView from './map-view/map-view';
+import City from './city/city';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
                     <div className="App-body">
                         <Route exact path="/" render={props => <Cities onReady={this.handleCitySelection} />} />
                         <Route path="/tour" render={props => <MapView cities={this.state.selectedCities} />} />
+                        <Route path="/:cityId" component={City} />
                     </div>
                 </Router>
             </div>

@@ -1,0 +1,12 @@
+.CityDetail {
+  display: flex;
+  padding-top: 60px; }
+  .CityDetail-content {
+    width: 40%;
+    text-align: center; }
+    .CityDetail-content-subtitle {
+      text-transform: uppercase; }
+    .CityDetail-content-description {
+      padding: 0 60px; }
+  .CityDetail-venues {
+    width: 60%; }

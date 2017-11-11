@@ -1,0 +1,29 @@
+@import '../_variables';
+
+.Venues {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Venue {
+    flex: 0 1 auto;
+    width: 50%;
+    margin-bottom: 20px;
+    &-content {
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0 20px;
+        background: white;
+        color: $color-brand-secondary;
+        height: 315px;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        margin: 0 0 36px;
+    }
+    &-cta {
+        margin-top: auto;
+        text-align: center;
+    }
+}
