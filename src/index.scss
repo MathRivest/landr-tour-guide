@@ -38,3 +38,11 @@ h4 {
     letter-spacing: 2px;
     margin: 0 0 12px 0;
 }
+
+a {
+    color: white;
+    transition: color 200ms linear;
+    &:hover {
+        color: $color-brand-secondary;
+    }
+}

@@ -31,3 +31,9 @@ h4 {
   line-height: 36px;
   letter-spacing: 2px;
   margin: 0 0 12px 0; }
+
+a {
+  color: white;
+  transition: color 200ms linear; }
+  a:hover {
+    color: #0d4457; }

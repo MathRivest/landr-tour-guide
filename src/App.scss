@@ -7,8 +7,19 @@
 }
 
 .App-header {
-    padding-top: 160px;
+    padding-top: 120px;
     margin-bottom: 48px;
+}
+
+.App-nav {
+    display: flex;
+    margin-bottom: 48px;
+    a {
+        margin-right: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
 }
 
 .App-body {
