@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature, Popup, ZoomControl } from 'react-mapbox-gl';
 import { withRouter } from 'react-router-dom';
 
+import './map.css';
+
 const Map = ReactMapboxGl({
     accessToken: 'pk.eyJ1IjoibWNoYW1iYXVkIiwiYSI6ImNqOXU5M21jeDB0aGkzMnBjZXQybjJnbmUifQ.hk9NZK4ie7Uo42KoUUYuaw'
 });
@@ -11,14 +13,14 @@ class MapView extends Component {
         super(props);
 
         if (!this.props.cities || this.props.cities.length === 0) {
-            this.props.history.push('/');
+            // this.props.history.push('/');
         }
 
         this.state = {
             selectedCity: undefined,
             fitBounds: undefined,
             center: [-0.109970527, 51.52916347],
-            zoom: [8]
+            zoom: [5]
         };
     }
 
@@ -26,16 +28,16 @@ class MapView extends Component {
         const { fitBounds, center, zoom, selectedCity } = this.state;
 
         return (
-            <div>
+            <div className="Map">
                 <Map
-                    style="mapbox://styles/mapbox/light-v9"
+                    style="mapbox://styles/mrivest/cj9uo7m9a42my2smpbvv5euns"
                     fitBounds={fitBounds}
                     center={center}
                     zoom={zoom}
                     onDrag={this.onDrag}
                     containerStyle={{
                         height: '500px',
-                        width: '500px'
+                        width: '100%'
                     }}
                 >
                     <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
