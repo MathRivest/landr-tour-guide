@@ -9,6 +9,7 @@ class City extends Component {
     constructor(props) {
         super(props);
         const cityId = this.props.match.params.cityId;
+        console.log(this.props);
         this.state = {
             city: _.find(mockCities, { id: cityId })
         };
@@ -17,11 +18,14 @@ class City extends Component {
     renderVenues() {
         return this.state.city.venues.map((venue, i) => {
             const description = venue.description ? <p>{venue.description}</p> : '';
+            const imgPath = `/images/${this.state.city.id}/${i + 1}.jpg`;
             return (
                 <div key={i} className="Venue">
                     <div className="Venue-content">
-                        <h4 className="TextHeading--secondary">{venue.name}</h4>
+                        <h4>{venue.name}</h4>
+                        <img src={imgPath} alt={venue.name} />
                         {description}
+                        <p className="TextHeading--secondary">Capacity: {venue.capacity}</p>
                         <div className="Venue-cta">
                             <button className="Button">Book now</button>
                         </div>

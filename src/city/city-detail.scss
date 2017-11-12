@@ -4,6 +4,7 @@
     &-content {
         width: 40%;
         text-align: center;
+        position: fixed;
         &-subtitle {
             text-transform: uppercase;
         }
@@ -13,5 +14,6 @@
     }
     &-venues {
         width: 60%;
+        margin-left: auto;
     }
 }

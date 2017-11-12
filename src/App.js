@@ -30,7 +30,7 @@ class App extends Component {
                     <div className="App-body">
                         <Route exact path="/" render={props => <Cities onReady={this.handleCitySelection} />} />
                         <Route path="/tour" render={props => <MapView cities={this.state.selectedCities} />} />
-                        <Route path="/:cityId" component={City} />
+                        <Route path="/cities/:cityId" component={City} />
                     </div>
                 </Router>
             </div>

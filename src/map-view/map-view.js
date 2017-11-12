@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Marker, ZoomControl } from 'react-mapbox-gl';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import './map-view.css';
 
@@ -35,11 +35,15 @@ class MapView extends Component {
         return this.props.cities.map((city, i) => {
             return (
                 <div className="MapView-cities-item">
-                    <h3 className="MapView-cities-item-title TextHeading--secondary"
+                    <h3
+                        className="MapView-cities-item-title TextHeading--secondary"
                         onMouseEnter={this.onMouseEnter.bind(this, city)}
-                        onMouseLeave={this.onMouseLeave.bind(this, city)}>{city.name}</h3>
+                        onMouseLeave={this.onMouseLeave.bind(this, city)}
+                    >
+                        {city.name}
+                    </h3>
                     <div className="MapView-cities-item-venueCta">
-                        <a href={city.id}>Choose your venue</a>
+                        <Link to={`/cities/${city.id}`}>Choose your venue</Link>
                     </div>
                     <a className="MapView-cities-item-dateCta">DD/MM/YYYY</a>
                 </div>
@@ -97,7 +101,7 @@ class MapView extends Component {
                     onMouseEnter={this.onMouseEnter.bind(this, city)}
                     onMouseLeave={this.onMouseLeave.bind(this, city)}
                 >
-                    <img src=''/>
+                    <img src="" />
                 </Marker>
             );
         });
