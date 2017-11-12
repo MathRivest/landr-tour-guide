@@ -101,7 +101,7 @@ class MapView extends Component {
                     onMouseEnter={this.onMouseEnter.bind(this, city)}
                     onMouseLeave={this.onMouseLeave.bind(this, city)}
                 >
-                    <img src="" />
+                    <img src="" alt="" />
                 </Marker>
             );
         });

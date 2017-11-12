@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { mockCities } from './../mockData';
-import { mockVenues } from './../mockData';
 import './city-detail.css';
 import './venues.css';
 

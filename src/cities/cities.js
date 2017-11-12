@@ -43,7 +43,7 @@ class Cities extends Component {
                 <div key={i} className={'City' + (city.selected ? ' is-selected' : '')}>
                     <div className="City-content" onClick={() => this.handleSelectCity(city)} style={tileContentStyles}>
                         <div className="City-background">
-                            <img src={`${process.env.PUBLIC_URL}/images/${city.id}.jpeg`} />
+                            <img src={`${process.env.PUBLIC_URL}/images/${city.id}.jpeg`} alt={city.name} />
                         </div>
                         <div className="City-content-body">
                             <h4 className="City-title">{city.name}</h4>
